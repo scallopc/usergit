@@ -13,14 +13,15 @@ import { ModalComponent } from '../modal/modal.component';
   styleUrls: ['./members.component.scss']
 })
 export class MembersComponent implements OnInit {
+  filter: string;
   tabela: IUser[] = [];
   paginaAtual : Number = 1 ;
   contador : Number = 5;
+
   constructor(private modalService: NgbModal, private _ns: NewsService) { }
 
   ngOnInit(): void {
     this.load();
-   
   }
 
   
